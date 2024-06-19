@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const expressFileUploader = require("express-fileupload");
+const loginroutes =require("./routes/authRoutes")
 
 const pdfRoutes = require("./routes/pdfDocumentRoutes");
 const { connectCloudinary } = require("./config/cloudinary");
@@ -29,6 +30,7 @@ connectCloudinary();
 
 // Routes
 app.use("/pdf", pdfRoutes);
+app.use("/",loginroutes)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
