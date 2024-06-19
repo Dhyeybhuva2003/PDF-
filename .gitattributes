@@ -1,0 +1,6 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto
+
+# Force specific file types to have consistent line endings.
+*.js text eol=lf
+*.json text eol=lf
